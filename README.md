@@ -74,59 +74,63 @@ Since the **MINIX console** lacks scroll bars, SSH and SFTP can be used for remo
 2. Set a root password using:
    ```sh
    passwd
-Update the pkgin package manager:
-sh
-Copy
-Edit
+## Step 1: Updating `pkgin` and Installing OpenSSH
+
+### Update the `pkgin` Package Manager
+```sh
 pkgin update || export PKG_REPOS=http://homepages.cs.ncl.ac.uk/nick.cook/csc2025/minix/3.2.1/packages && pkgin update
-Install OpenSSH:
-sh
-Copy
-Edit
+```
+
+### Install OpenSSH
+```sh
 pkgin install openssh
-Restart the system:
-sh
-Copy
-Edit
+```
+
+### Restart the System
+```sh
 shutdown -r now
-Step 2: Configuring Port Forwarding in VirtualBox & VMware
-VirtualBox
-Navigate to Settings → Network → Adapter 1 → Advanced → Port Forwarding.
-Add a new rule with the following attributes:
-Name: ssh-access
-Host Port: 2222
-Guest IP: 10.0.2.15
-Guest Port: 22
-Host IP: 127.0.0.1
-Protocol: TCP
-Find the guest IP by running:
-sh
-Copy
-Edit
-ifconfig
-Connect to the VM from your host system:
-sh
-Copy
-Edit
-ssh -p 2222 root@127.0.0.1
-VMware
-Open VMware Workstation and select your MINIX 3 VM.
-Navigate to Edit → Virtual Network Editor.
-Configure NAT Settings and forward port 2222 to 22.\n
-Use the same SSH connection command as above:
-sh
-Copy
-Edit
-ssh -p 2222 root@127.0.0.1
-Developing MINIX 3 in Eclipse
-In Eclipse, open the Remote System Explorer.
-Add a New Connection using SSH.
-Browse the MINIX file system remotely and edit files using Eclipse.
-Compile and test modifications directly from the Eclipse terminal.
-References
-VirtualBox Downloads
-VMware Workstation
-Eclipse IDE
-MINIX 3 Official Website
-Disclaimer
-This is a course project and is not an official modification of MINIX 3. It was developed purely for educational purposes.
+```
+
+## Step 2: Configuring Port Forwarding in VirtualBox & VMware
+
+### VirtualBox
+1. Navigate to **Settings → Network → Adapter 1 → Advanced → Port Forwarding**.
+2. Add a new rule with the following attributes:
+   - **Name**: ssh-access  
+   - **Host Port**: 2222  
+   - **Guest IP**: 10.0.2.15  
+   - **Guest Port**: 22  
+   - **Host IP**: 127.0.0.1  
+   - **Protocol**: TCP  
+3. Find the guest IP by running:
+   ```sh
+   ifconfig
+   ```
+4. Connect to the VM from your host system:
+   ```sh
+   ssh -p 2222 root@127.0.0.1
+   ```
+
+### VMware
+1. Open **VMware Workstation** and select your **MINIX 3 VM**.
+2. Navigate to **Edit → Virtual Network Editor**.
+3. Configure **NAT Settings** and forward **port 2222 to 22**.
+4. Use the same SSH connection command as above:
+   ```sh
+   ssh -p 2222 root@127.0.0.1
+   ```
+
+## Step 3: Developing MINIX 3 in Eclipse
+1. In **Eclipse**, open the **Remote System Explorer**.
+2. Add a **New Connection** using **SSH**.
+3. Browse the MINIX file system remotely and edit files using Eclipse.
+4. Compile and test modifications directly from the **Eclipse terminal**.
+
+## References
+- [VirtualBox Downloads](https://www.virtualbox.org/wiki/Downloads)
+- [VMware Workstation](https://www.vmware.com/products/workstation-pro.html)
+- [Eclipse IDE](https://www.eclipse.org/downloads/)
+- [MINIX 3 Official Website](https://www.minix3.org/)
+
+## Disclaimer
+This is a **course project** and is not an official modification of MINIX 3. It was developed purely for **educational purposes**.
