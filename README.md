@@ -18,7 +18,6 @@ As part of the **CSC 502: Principles of OS & Distributed Systems** course, we ha
 ## Introduction to MINIX 3
 **MINIX 3** is an open-source, microkernel-based operating system designed for flexibility, security, and reliability. It runs on **x86** and **ARM** architectures and is compatible with **NetBSD**, allowing it to support numerous NetBSD packages. The OS follows a **microkernel architecture**, where only essential services operate in kernel mode, and all other components function as isolated user-mode processes.
 
-![MINIX 3 Architecture](https://user-images.githubusercontent.com/5839686/33244061-8fa1facc-d2a5-11e7-8fd9-cf41bc8b946f.png)
 
 ---
 
