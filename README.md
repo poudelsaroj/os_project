@@ -1,7 +1,7 @@
 # Customizing MINIX 3 - OS Project
 
 ## Project Overview
-As part of the **CSC 502: Principles of OS & Distributed Systems** course, we have customized the **MINIX 3** operating system by implementing the following modifications:
+we have customized the **MINIX 3** operating system by implementing the following modifications:
 
 - **Custom Startup and Shutdown Banner**: Displaying personalized messages during system startup and shutdown.
 - **New System Command**: Adding a custom system command that can be executed in the terminal.
