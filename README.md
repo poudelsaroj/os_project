@@ -77,7 +77,7 @@ Since the **MINIX console** lacks scroll bars, SSH and SFTP can be used for remo
 
 ### Update the `pkgin` Package Manager
 ```sh
-pkgin update || export PKG_REPOS=http://homepages.cs.ncl.ac.uk/nick.cook/csc2025/minix/3.2.1/packages && pkgin update
+pkgin update || export PKG_REPOS= http://minix3.org/pkgsrc/packages/3.2.1./i686/All  && pkgin update
 ```
 
 ### Install OpenSSH
